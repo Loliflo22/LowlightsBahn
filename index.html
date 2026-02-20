@@ -3,287 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LB – Lowlights Bahn</title>
+<title>LB Tickets</title>
 
 <style>
-body {
+  body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-    scroll-behavior: smooth;
-}
-
-header {
-    background-color: #EC0016;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 26px;
-    font-weight: bold;
-    background: white;
-    color: #EC0016;
-    padding: 5px 15px;
-    border-radius: 4px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
-}
-
-section {
-    padding: 80px 15%;
-}
-
-.hero {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 120px 20px;
-}
-
-.hero h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 22px;
-    margin-bottom: 30px;
-}
-
-.button {
-    background-color: #EC0016;
-    color: white;
-    padding: 14px 30px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    display: inline-block;
-}
-
-h2 {
-    color: #EC0016;
-    margin-bottom: 20px;
-}
-
-.card {
     background: #f4f4f4;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-left: 6px solid #EC0016;
-    border-radius: 6px;
-}
-
-.ticket-box {
+    padding: 90px 20px;
+  }
+  .wrap {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  }
+  .top {
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom: 18px;
+  }
+  .logo {
+    font-weight: bold;
     background: #EC0016;
     color: white;
-    padding: 30px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.ticket-price {
-    font-size: 40px;
-    font-weight: bold;
-    margin: 15px 0;
-}
-
-/* Neuer Ticket-Button */
-.ticket-buy {
-    margin-top: 18px;
-}
-
-.ticket-buy a {
-    background: #EC0016;            /* roter Button */
-    color: white;
-    border: 2px solid white;         /* damit er im roten Kasten sichtbar bleibt */
-    padding: 12px 26px;
+    padding: 8px 14px;
     border-radius: 6px;
-    text-decoration: none;
+    font-size: 18px;
+  }
+  h1 { margin: 0; color: #EC0016; }
+  .sub { color:#333; margin: 8px 0 0; }
+  .card {
+    margin-top: 18px;
+    border-left: 6px solid #EC0016;
+    background: #f7f7f7;
+    padding: 18px;
+    border-radius: 10px;
+  }
+  .price {
+    font-size: 18px;
+    margin: 0 0 14px;
+  }
+  label { display:block; font-weight:bold; margin: 12px 0 6px; }
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  .btn {
+    margin-top: 14px;
+    background: #EC0016;
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
     font-weight: bold;
-    display: inline-block;
-}
-
-.ticket-buy a:hover {
-    background: #ffffff;
-    color: #EC0016;
-}
-
-footer {
-    background-color: #222;
-    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+  .btn:hover { filter: brightness(1.05); }
+  .hint {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #444;
+    line-height: 1.4;
+  }
+  .status {
+    margin-top: 14px;
+    padding: 12px;
+    border-radius: 8px;
+    display:none;
+  }
+  .ok { background:#eaf8ee; border: 1px solid #b8e2c2; color:#1f6b2f; }
+  .err { background:#fdecec; border: 1px solid #f1b5b5; color:#8a1f1f; }
+  .footer {
+    margin-top: 22px;
+    font-size: 12px;
+    color: #666;
     text-align: center;
-    padding: 30px;
-}
+  }
+  a { color:#EC0016; text-decoration:none; font-weight:bold; }
 </style>
 </head>
 
 <body>
+<div class="wrap">
+  <div class="top">
+    <div class="logo">LB</div>
+    <div>
+      <h1>LB Jahreskarte</h1>
+      <div class="sub">Bestellung wird automatisch im Server verarbeitet.</div>
+    </div>
+  </div>
 
-<header>
-<div class="logo">LB</div>
-<nav>
-<a href="#konzern">Konzern</a>
-<a href="#flotte">Flotte</a>
-<a href="#linien">Linien</a>
-<a href="#tickets">Tickets</a>
-<a href="#sicherheit">Sicherheit</a>
-<a href="#karriere">Karriere</a>
-<a href="#cargo">LB Cargo</a>
-<a href="#metronom">Metronom</a>
-<a href="https://loliflo22.github.io/LB-Navigator/" target="_blank">LB Navigator</a>
-</nav>
-</header>
+  <div class="card">
+    <div class="price">
+      Preis: <b>70$ Economy Dollars</b> (gültig 1 RP-Jahr) <br>
+      Mehrfachkauf = <b>Verlängerung</b> um 1 RP-Jahr.
+    </div>
 
-<section class="hero">
-<h1>Lowlights Bahn</h1>
-<p>Verlässlich. Schnell. Günstig – trotz Kanten.</p>
-<a class="button" href="#tickets">Jetzt Ticket sichern</a>
-</section>
+    <label for="playerName">Minecraft-Name</label>
+    <input id="playerName" placeholder="z.B. Loliflo" autocomplete="off">
 
-<section id="konzern">
-<h2>Der Konzern</h2>
-<div class="card">
-Gegründet 1980 mit Sitz in Soul Society verbindet die Lowlights Bahn
-seit Jahrzehnten die wichtigsten Regionen des Servers.
-</div>
-<div class="card">
-Kernkonzept: Lokbespannte Doppelstockzüge für maximale Kapazität
-und effizienten Regionalverkehr.
-</div>
-</section>
+    <button class="btn" onclick="buyNow()">LB Karte Kaufen</button>
 
-<section id="flotte">
-<h2>Unsere Flotte</h2>
+    <div id="statusBox" class="status"></div>
 
-<div class="card">
-<strong>Lokomotiven:</strong><br>
-BR218<br>
-BR246<br>
-BR112
+    <div class="hint">
+      Hinweis: Diese Seite legt eine Bestellung an. Dein Minecraft-Server holt die Bestellungen automatisch ab und zieht das Geld ab.
+      Wenn du nicht genug Geld hast, wird die Bestellung als Fehler markiert.
+    </div>
+  </div>
+
+  <div class="footer">
+    © Lowlights Bahn — <a href="https://loliflo22.github.io/LowlightsBahn/" target="_blank">Zur Hauptseite</a>
+  </div>
 </div>
 
-<div class="card">
-<strong>Triebwagen:</strong><br>
-BR628 (selten im Einsatz)
-</div>
+<script>
+/** ✅ HIER ANPASSEN */
+const API_URL = "DEINE_WEBAPP_URL_HIER";      // z.B. https://script.google.com/macros/s/...../exec
+const KEY     = "MEIN_SECRET_KEY";           // muss exakt wie im Apps Script sein
 
-<div class="card">
-<strong>Wagenmaterial:</strong><br>
-Doppelstockwagen (Standard)<br>
-Ehemalige N-Wagen (nur noch im Metronom)
-</div>
-</section>
+function show(msg, ok=true){
+  const box = document.getElementById("statusBox");
+  box.style.display = "block";
+  box.className = "status " + (ok ? "ok" : "err");
+  box.textContent = msg;
+}
 
-<section id="linien">
-<h2>Liniennetz</h2>
+async function buyNow(){
+  const name = document.getElementById("playerName").value.trim();
+  if(!name) return show("Bitte Minecraft-Namen eingeben.", false);
 
-<div class="card">
-<strong>Lowlight Bahn</strong><br>
-RB1<br>
-RB3<br>
-RB4<br>
-RE6
-</div>
+  show("Bestellung wird gesendet…", true);
 
-<div class="card">
-<strong>Metronom</strong><br>
-RE41<br>
-RE4
-</div>
-</section>
+  try{
+    const res = await fetch(API_URL, {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({ action:"order", key: KEY, player: name })
+    });
 
-<section id="tickets">
-<h2>Tickets & Preise</h2>
+    const data = await res.json();
 
-<div class="ticket-box">
-Minecraft Jahreskarte<br>
-<div class="ticket-price">70$ Economy Dollars</div>
-Gültig für alle RB- und RE-Linien der Lowlights Bahn.<br>
-Metronom-Strecken nicht im Ticket enthalten!!!<br>
-Bei interesse bitte bei @lowlightflow auf Discord oder MC1_16 in Minecraft Melden.
-
-<div class="ticket-buy">
-  <a href="https://loliflo22.github.io/LB-Tickets" target="_blank">LB Karte Kaufen</a>
-</div>
-</div>
-</section>
-
-<section id="sicherheit">
-<h2>Sicherheit & Ordnung</h2>
-
-<div class="card">
-Gleisbetritt verboten. Strafe: 60 Eisen bis permanenter Ban.
-</div>
-
-<div class="card">
-Soundpflicht: Bahnübergänge und Signale müssen hörbar sein.
-</div>
-
-<div class="card">
-Signal- und Redstonebereiche dürfen nicht betreten werden.
-</div>
-</section>
-
-<section id="karriere">
-<h2>Karriere bei LB</h2>
-
-<div class="card">
-Fahrkartenkontrolleur – Fahrkartenkontrolle im Zug und Zählung von Fahrgästen.
-</div>
-
-<div class="card">
-Fahrdienstleiter – Steuerung des Streckennetzes.
-</div>
-
-<div class="card">
-Redstone-Signaltechniker – Infrastruktur & Wartung für Redstone.
-</div>
-
-<div class="card">
-InfraGo Arbeiter – Qualitätskontrolle des Gleiszustandes und für die instandhaltung des Gleisbereichs.
-</div>
-</section>
-
-<section id="cargo">
-<h2>LB Cargo</h2>
-
-<div class="card">
-<strong>Güterverkehr auf Anfrage</strong><br>
-Wir können auf Anfrage Güterstrecken und Güterverkehre einrichten (Planung, Trassen, Betrieb).
-Melde dich dafür bei @lowlightflow auf Discord oder MC1_16 in Minecraft.
-</div>
-
-<div class="card">
-<strong>Schienen-Ankauf</strong><br>
-Für Spieler mit einem Kontostand unter <strong>100.000€</strong> kaufen wir Schienen an.<br>
-Preis: <strong>8€ pro Schiene</strong> (Ankauf).
-</div>
-</section>
-
-<section id="metronom">
-<h2>Metronom</h2>
-
-<div class="card">
-Eigenständiges Partnerunternehmen im Wettbewerb mit der LB.
-Trotz Konkurrenz besteht eine kooperative Zusammenarbeit im RE-Netz.
-</div>
-</section>
-
-<footer>
-© 1980–2026 Lowlights Bahn<br>
-Konzernsitz: Soul Society
-</footer>
-
+    if(data.ok){
+      show("Bestellung angekommen ✅ (Order-ID: " + data.id + "). Wird gleich automatisch im Server verarbeitet.", true);
+    }else{
+      show("Fehler: " + (data.error || "unknown"), false);
+    }
+  }catch(e){
+    show("Konnte nicht senden: " + e, false);
+  }
+}
+</script>
 </body>
 </html>
