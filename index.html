@@ -104,9 +104,9 @@ h2 {
 }
 
 .ticket-buy a {
-    background: #EC0016;            /* roter Button */
+    background: #EC0016;
     color: white;
-    border: 2px solid white;         /* damit er im roten Kasten sichtbar bleibt */
+    border: 2px solid white;
     padding: 12px 26px;
     border-radius: 6px;
     text-decoration: none;
@@ -117,6 +117,31 @@ h2 {
 .ticket-buy a:hover {
     background: #ffffff;
     color: #EC0016;
+}
+
+/* Standard Button in grauen Cards */
+.btn-card {
+    margin-top: 12px;
+}
+
+.btn-card a {
+    background: #EC0016;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn-card a:hover {
+    filter: brightness(1.05);
+}
+
+.small {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.5;
 }
 
 footer {
@@ -137,6 +162,8 @@ footer {
 <a href="#flotte">Flotte</a>
 <a href="#linien">Linien</a>
 <a href="#tickets">Tickets</a>
+<a href="#navigator">LB Navigator</a>
+<a href="#gebrauchtfahrzeuge">Gebrauchtfahrzeuge</a>
 <a href="#sicherheit">Sicherheit</a>
 <a href="#karriere">Karriere</a>
 <a href="#cargo">LB Cargo</a>
@@ -170,7 +197,9 @@ und effizienten Regionalverkehr.
 <strong>Lokomotiven:</strong><br>
 BR218<br>
 BR246<br>
-BR112
+BR112<br>
+BR78<br>
+V100
 </div>
 
 <div class="card">
@@ -211,10 +240,54 @@ Minecraft Jahreskarte<br>
 <div class="ticket-price">70$ Economy Dollars</div>
 Gültig für alle RB- und RE-Linien der Lowlights Bahn.<br>
 Metronom-Strecken nicht im Ticket enthalten!!!<br>
-Bei interesse bitte bei @lowlightflow auf Discord oder MC1_16 in Minecraft Melden.
+Bei Interesse bitte bei @lowlightflow auf Discord oder MC1_16 in Minecraft melden.
 
 <div class="ticket-buy">
   <a href="https://loliflo22.github.io/LB-Tickets" target="_blank">LB Karte Kaufen</a>
+</div>
+</div>
+</section>
+
+<section id="navigator">
+<h2>LB Navigator</h2>
+
+<div class="card">
+<strong>Was ist der LB Navigator?</strong><br>
+Der LB Navigator ist unser Online-Fahrplan & Strecken-Tool. Damit findest du schnell heraus,
+welche Linie du brauchst, wo du umsteigen musst und wie du am schnellsten ans Ziel kommst.
+</div>
+
+<div class="card">
+<strong>So benutzt du ihn:</strong><br>
+<div class="small">
+1) Öffne den LB Navigator<br>
+2) Suche deine Start-Station und dein Ziel<br>
+3) Der Navigator zeigt dir passende Linien (RB/RE) und Umstiege<br>
+4) Optional: Nutze die Anzeige, um dich auf dem Server besser zu orientieren
+</div>
+
+<div class="btn-card">
+  <a href="https://loliflo22.github.io/LB-Navigator/" target="_blank">Zum LB Navigator</a>
+</div>
+</div>
+</section>
+
+<section id="gebrauchtfahrzeuge">
+<h2>Gebrauchtfahrzeuge</h2>
+
+<div class="card">
+<strong>Fahrzeugvermietung & Verkauf</strong><br>
+Du brauchst kurzfristig eine Lok oder Wagen für ein Event, Bauprojekt oder Sonderzug?
+Wir bieten gebrauchte Fahrzeuge zur <strong>Miete</strong> oder zum <strong>Verkauf</strong> an (je nach Bestand).
+<br><br>
+<div class="small">
+• Vermietung: Zeitlich begrenzt, ideal für Sonderfahrten<br>
+• Verkauf: Übergabe inkl. kurzer Einweisung / Regeln<br>
+• Anfrage: @lowlightflow auf Discord oder MC1_16 ingame
+</div>
+
+<div class="btn-card">
+  <a href="https://loliflo22.github.io/LB-Gebrauchtfahrzeuge/" target="_blank">Zur Gebrauchtfahrzeuge-Seite</a>
 </div>
 </div>
 </section>
@@ -251,7 +324,7 @@ Redstone-Signaltechniker – Infrastruktur & Wartung für Redstone.
 </div>
 
 <div class="card">
-InfraGo Arbeiter – Qualitätskontrolle des Gleiszustandes und für die instandhaltung des Gleisbereichs.
+InfraGo Arbeiter – Qualitätskontrolle des Gleiszustandes und für die Instandhaltung des Gleisbereichs.
 </div>
 </section>
 
